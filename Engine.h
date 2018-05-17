@@ -19,6 +19,8 @@ public:
   void drawSpriteVector(std::vector<sf::Sprite> sprite_vector);
 
   void setSpriteVector(std::vector<sf::Sprite> sprite_vector);
+  void appendSpriteVector(std::vector<sf::Sprite> sprite_vector);
+
   std::vector<sf::Sprite> getSpriteVector() { return sprite_vector_;};
 private:
   std::vector<sf::Sprite> sprite_vector_;

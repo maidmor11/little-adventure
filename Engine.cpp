@@ -79,3 +79,11 @@ void Engine::setSpriteVector(std::vector<sf::Sprite> sprite_vector)
     this->sprite_vector_.push_back(sprite);
   }
 }
+
+void Engine::appendSpriteVector(std::vector<sf::Sprite> sprite_vector)
+{
+  for(auto &sprite : sprite_vector)
+  {
+    this->sprite_vector_.push_back(sprite);
+  }
+}
