@@ -14,11 +14,12 @@
 
 Engine::Engine()
 {
-
   window_.create(sf::VideoMode(1280,960), "Adventure");
   fillRoomVector();
   this->sprite_vector_.clear();
-  room_vector_.at(State::current_room::ARENA)->enter(this);
+  current_room_ = State::current_room::MENU;
+  next_room_ = current_room_;
+  room_vector_.at(current_room_)->enter(this);
 }
 
 
@@ -32,9 +33,6 @@ void Engine::run()
 {
   is_running_ = true;
 
-  int current_room = State::current_room::ARENA;
-  int next_room = current_room;
-
 
   while(is_running_ == true && window_.isOpen())
   {
@@ -45,21 +43,25 @@ void Engine::run()
       if(e.type == sf::Event::Closed)
         window_.close();
     }
-
-
+    handleRoom();
 
     drawSpriteVector(this->sprite_vector_);
     window_.display();
-
-    next_room = room_vector_.at(current_room)->transition(&window_);
-    if(current_room != next_room)
-    {
-      room_vector_.at(current_room)->exit();
-      current_room = next_room;
-      room_vector_.at(current_room)->enter(this);
-    }
   }
 }
+
+
+void Engine::handleRoom()
+{
+  next_room_ = room_vector_.at(current_room_)->transition(&window_);
+  if(current_room_ != next_room_)
+  {
+    room_vector_.at(current_room_)->exit();
+    current_room_ = next_room_;
+    room_vector_.at(current_room_)->enter(this);
+  }
+}
+
 
 void Engine::drawSpriteVector(std::vector<sf::Sprite> sprite_vector)
 {

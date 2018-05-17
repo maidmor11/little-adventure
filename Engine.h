@@ -25,6 +25,12 @@ private:
   std::vector<State*> room_vector_;
   sf::RenderWindow window_;
   bool is_running_;
+
+
+  //ROOM HANDLING
+  void handleRoom();
+  int current_room_;
+  int next_room_;
 };
 
 
