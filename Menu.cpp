@@ -26,6 +26,6 @@ int Menu::transition(sf::RenderWindow* game_window)
   if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
   {
     if(start_button_sprite_.getGlobalBounds().contains(sf::Vector2f(mouse_pos)))
-      return 1;
+      return State::current_room::ARENA;
   }
 }
