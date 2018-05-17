@@ -15,7 +15,7 @@
 Engine::Engine()
 {
 
-  window_.create(sf::VideoMode(600,400), "Adventure");
+  window_.create(sf::VideoMode(1280,960), "Adventure");
   fillRoomVector();
   this->sprite_vector_.clear();
   room_vector_.at(State::current_room::ARENA)->enter(this);
@@ -32,7 +32,7 @@ void Engine::run()
 {
   is_running_ = true;
 
-  int current_room = State::current_room::MENU;
+  int current_room = State::current_room::ARENA;
   int next_room = current_room;
 
 

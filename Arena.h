@@ -13,6 +13,10 @@ private:
   //Background Image
   sf::Texture arena_background_;
   sf::Sprite background_sprite_;
+
+  //give up button
+  sf::Texture arena_give_up_;
+  sf::Sprite arena_give_up_sprite_;
 };
 
 #endif
