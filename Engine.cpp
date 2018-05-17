@@ -19,7 +19,8 @@ void Engine::run()
     sf::Event e;
     while(window_.pollEvent(e))
     {
-      window_.close();
+      if(e.type == sf::Event::Closed)
+        window_.close();
     }
     drawSpriteVector(sprite_vector_);
     window_.display();
