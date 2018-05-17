@@ -1,5 +1,5 @@
-#ifndef ARENA_H
-#define ARENA_H
+#ifndef GENDER_H
+#define GENDER_H
 #include "Room.h"
 
 class Engine;

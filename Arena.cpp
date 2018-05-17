@@ -7,6 +7,10 @@
 
 void Arena::enter(Engine* engine)
 {
+  if(room_sprite_vector_.size() > 0)
+  {
+    std::cout << "Contains ELEMENTS!!!!!" << std::endl;
+  }
   this->room_sprite_vector_.clear();
   arena_background_.loadFromFile("./assets/arena_background.png");
   background_sprite_.setTexture(arena_background_);

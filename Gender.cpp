@@ -1,4 +1,4 @@
-#include "Arena.h"
+#include "Gender.h"
 #include "Engine.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -15,11 +15,11 @@ void Gender::enter(Engine* engine)
   gender_female_sprite_.setTexture(gender_female_);
 
 
-  gender_male_sprite.setPosition(1280 / 2 + 100, 960 / 2);
+  gender_male_sprite_.setPosition(1280 / 2 + 100, 960 / 2);
   gender_female_sprite_.setPosition(1280 / 2 - 100, 960 / 2);
 
-  this->room_vector_.push_back(gender_male_sprite_);
-  this->room_vector_.push_back(gender_female_sprite_);
+  this->room_sprite_vector_.push_back(gender_male_sprite_);
+  this->room_sprite_vector_.push_back(gender_female_sprite_);
 
   engine->setSpriteVector(this->room_sprite_vector_);
   std::cout << "Entered Gender" << std::endl;
@@ -27,7 +27,7 @@ void Gender::enter(Engine* engine)
 
 void Gender::exit()
 {
-  std::cout << "Exit Arena" << std::endl;
+  std::cout << "Exit Gender" << std::endl;
 }
 
 int Gender::transition(sf::RenderWindow* game_window)

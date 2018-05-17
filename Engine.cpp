@@ -9,6 +9,10 @@
 
 //INCLUDE OF THE ROOMS:
 #include "Menu.h"
+#include "Gender.h"
+#include "Races.h"
+#include "Classes.h"
+#include "Abilities.h"
 #include "Arena.h"
 
 
@@ -27,9 +31,9 @@ void Engine::fillRoomVector()
 {
   room_vector_.push_back(new Menu);
   room_vector_.push_back(new Gender);
-  room_vector_.push_back(new Race);
+  room_vector_.push_back(new Races);
   room_vector_.push_back(new Classes);
-  room_vector_.push_back(new )
+  room_vector_.push_back(new Abilities);
   room_vector_.push_back(new Arena);
 }
 
@@ -60,6 +64,10 @@ void Engine::handleRoom()
   next_room_ = room_vector_.at(current_room_)->transition(&window_);
   if(current_room_ != next_room_)
   {
+    if(current_room >= State::current_room::CHOOSE_GENDER && current_room <= State::current_room::CHOOSE_ABILITIES)
+    {
+      room_vector_.at(current_room)->getUserInput();
+    }
     room_vector_.at(current_room_)->exit();
     current_room_ = next_room_;
     room_vector_.at(current_room_)->enter(this);

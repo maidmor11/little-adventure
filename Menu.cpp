@@ -9,7 +9,6 @@ void Menu::enter(Engine* engine)
   this->room_sprite_vector_.clear();
   start_button_.loadFromFile("./assets/menu_start_btn.png");
   start_button_sprite_.setTexture(start_button_);
-  start_button_sprite_.setPosition(1280/2, 960/2);
   this->room_sprite_vector_.push_back(start_button_sprite_);
   engine->setSpriteVector(this->room_sprite_vector_);
   std::cout << "Entered Menu" << std::endl;
@@ -26,6 +25,7 @@ int Menu::transition(sf::RenderWindow* game_window)
   if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
   {
     if(start_button_sprite_.getGlobalBounds().contains(sf::Vector2f(mouse_pos)))
-      return State::current_room::ARENA;
+      return State::current_room::CHOOSE_GENDER;
   }
+  return State::current_room::MENU;
 }

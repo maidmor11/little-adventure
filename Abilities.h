@@ -1,9 +1,10 @@
-#ifndef ABIITIES_H
-#define ABIITIES_H
+#ifndef ABILITIES_H
+#define ABILITIES_H
 
+#include "Room.h"
 class Engine;
 
-class Abilities
+class Abilities : public State
 {
 public:
   void enter(Engine* engine);
@@ -13,7 +14,7 @@ private:
   //Objects in Room
   sf::Texture fire_ability_banner_;
   sf::Texture ice_ability_banner_;
-  
+
   sf::Sprite fire_ability_banner_sprite_;
   sf::Sprite ice_ability_banner_sprite_;
 };

@@ -28,4 +28,5 @@ int Races::transition(sf::RenderWindow* game_window)
     if(human_banner_sprite_.getGlobalBounds().contains(sf::Vector2f(mouse_pos)))
       return State::current_room::CHOOSE_CLASS;
   }
+  return State::current_room::CHOOSE_RACE;
 }

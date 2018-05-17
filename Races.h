@@ -1,9 +1,10 @@
 #ifndef RACE_H
 #define RACE_H
 
+#include "Room.h"
 class Engine;
 
-class Race
+class Races : public State
 {
 public:
   void enter(Engine* engine);
