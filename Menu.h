@@ -12,8 +12,8 @@ public:
   int transition(sf::RenderWindow* game_window);
 private:
   //Objects in Room
-  sf::Texture plant_;
-  sf::Sprite plant_sprite_;
+  sf::Texture start_button_;
+  sf::Sprite start_button_sprite_;
 };
 
 
