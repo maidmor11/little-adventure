@@ -10,6 +10,7 @@ Engine::Engine()
   window_.create(sf::VideoMode(600,400), "Adventure");
   fillRoomVector();
   this->sprite_vector_.clear();
+  room_vector_.at(State::current_room::MENU)->enter(this);
 }
 
 
@@ -37,6 +38,11 @@ void Engine::run()
         window_.close();
     }
 
+
+
+    drawSpriteVector(this->sprite_vector_);
+    window_.display();
+
     next_room = room_vector_.at(current_room)->transition();
     if(current_room != next_room)
     {
@@ -45,8 +51,6 @@ void Engine::run()
       room_vector_.at(current_room)->enter(this);
     }
 
-    drawSpriteVector(this->sprite_vector_);
-    window_.display();
   }
 }
 
