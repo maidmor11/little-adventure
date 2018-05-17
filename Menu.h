@@ -1,6 +1,7 @@
 #ifndef MENUE_H
 #define MENUE_H
 
+#include "Room.h"
 class Engine;
 
 class Menu : public State

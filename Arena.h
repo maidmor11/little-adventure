@@ -8,7 +8,7 @@ class Arena : public State
 public:
   void enter(Engine* engine);
   void exit();
-  int transition();
+  int transition(sf::RenderWindow* game_window);
 private:
   //Background Image
   sf::Texture arena_background_;

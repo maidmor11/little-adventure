@@ -8,6 +8,7 @@
 
 
 //INCLUDE OF THE ROOMS:
+#include "Menu.h"
 #include "Arena.h"
 
 
@@ -23,7 +24,7 @@ Engine::Engine()
 
 void Engine::fillRoomVector()
 {
-  // room_vector_.push_back(new Menu);
+  room_vector_.push_back(new Menu);
   room_vector_.push_back(new Arena);
 }
 
@@ -50,7 +51,7 @@ void Engine::run()
     drawSpriteVector(this->sprite_vector_);
     window_.display();
 
-    next_room = room_vector_.at(current_room)->transition();
+    next_room = room_vector_.at(current_room)->transition(&window_);
     if(current_room != next_room)
     {
       room_vector_.at(current_room)->exit();

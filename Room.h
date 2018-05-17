@@ -11,7 +11,7 @@ public:
   enum current_room {MENU, ARENA};
   virtual void enter(Engine* engine) = 0;
   virtual void exit() = 0;
-  virtual int transition() = 0;
+  virtual int transition(sf::RenderWindow* game_window) = 0;
 protected:
   // Engine* engine_;
   std::vector<sf::Sprite> room_sprite_vector_;

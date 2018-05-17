@@ -1,6 +1,7 @@
-#include <SFM/Graphics.hpp>
-#include "Menue.h"
+#include <SFML/Graphics.hpp>
+#include "Menu.h"
 #include "Engine.h"
+#include <iostream>
 
 void Menu::enter(Engine* engine)
 {
@@ -19,5 +20,5 @@ void Menu::exit()
 
 int Menu::transition(sf::RenderWindow* game_window)
 {
-
+  return 0;
 }
