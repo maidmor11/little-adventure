@@ -2,6 +2,7 @@
 #define ROOM_H
 
 #include <SFML/Graphics.hpp>
+
 class Engine;
 
 class State

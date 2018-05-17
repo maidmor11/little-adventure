@@ -4,19 +4,26 @@
 #include "Room.h"
 #include <iostream>
 
+
+
+
+//INCLUDE OF THE ROOMS:
+#include "Arena.h"
+
+
 Engine::Engine()
 {
 
   window_.create(sf::VideoMode(600,400), "Adventure");
   fillRoomVector();
   this->sprite_vector_.clear();
-  room_vector_.at(State::current_room::MENU)->enter(this);
+  room_vector_.at(State::current_room::ARENA)->enter(this);
 }
 
 
 void Engine::fillRoomVector()
 {
-  room_vector_.push_back(new Menu);
+  // room_vector_.push_back(new Menu);
   room_vector_.push_back(new Arena);
 }
 

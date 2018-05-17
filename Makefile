@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp Room.cpp Engine.cpp -Lsfml -lsfml-graphics -lsfml-window -lsfml-system
+	g++ main.cpp Engine.cpp Arena.cpp -Lsfml -lsfml-graphics -lsfml-window -lsfml-system
