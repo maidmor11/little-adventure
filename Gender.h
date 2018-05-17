@@ -10,6 +10,12 @@ public:
   void exit();
   int transition(sf::RenderWindow* game_window);
 private:
+  //Banners
+  sf::Texture gender_male_;
+  sf::Sprite gender_male_sprite_;
+
+  sf::Texture gender_female_;
+  sf::Sprite gender_female_sprite_;
 };
 
 #endif

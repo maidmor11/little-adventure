@@ -26,6 +26,10 @@ Engine::Engine()
 void Engine::fillRoomVector()
 {
   room_vector_.push_back(new Menu);
+  room_vector_.push_back(new Gender);
+  room_vector_.push_back(new Race);
+  room_vector_.push_back(new Classes);
+  room_vector_.push_back(new )
   room_vector_.push_back(new Arena);
 }
 

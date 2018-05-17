@@ -5,7 +5,7 @@
 #include <vector>
 
 
-void Arena::enter(Engine* engine)
+void Classes::enter(Engine* engine)
 {
   this->room_sprite_vector_.clear();
 
@@ -18,12 +18,12 @@ void Arena::enter(Engine* engine)
   std::cout << "Entered Classes" << std::endl;
 }
 
-void Arena::exit()
+void Classes::exit()
 {
   std::cout << "Exit Classes" << std::endl;
 }
 
-int Arena::transition(sf::RenderWindow* game_window)
+int Classes::transition(sf::RenderWindow* game_window)
 {
   sf::Vector2i mouse_pos = sf::Mouse::getPosition(*game_window);
   if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
@@ -34,5 +34,5 @@ int Arena::transition(sf::RenderWindow* game_window)
     }
 
   }
-  return 1;
+  return State::current_room::CHOOSE_CLASS;
 }

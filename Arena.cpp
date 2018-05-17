@@ -33,9 +33,9 @@ int Arena::transition(sf::RenderWindow* game_window)
   {
     if(arena_give_up_sprite_.getGlobalBounds().contains(sf::Vector2f(mouse_pos)))
     {
-      return State::MENU;
+      return State::current_room::MENU;
     }
 
   }
-  return 1;
+  return State::current_room::ARENA;
 }
