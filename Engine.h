@@ -25,8 +25,6 @@ private:
   std::vector<State*> room_vector_;
   sf::RenderWindow window_;
   bool is_running_;
-
-
 };
 
 
