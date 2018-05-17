@@ -15,25 +15,4 @@ protected:
   // Engine* engine_;
   std::vector<sf::Sprite> room_sprite_vector_;
 };
-
-class Menu : public State
-{
-public:
-  void enter(Engine* engine);
-  void exit();
-  int transition();
-private:
-  //Objects in Room
-  sf::Texture plant_;
-  sf::Sprite plant_sprite_;
-};
-
-class Arena : public State
-{
-public:
-  void enter(Engine* engine);
-  void exit();
-  int transition();
-private:
-};
 #endif

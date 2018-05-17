@@ -50,7 +50,6 @@ void Engine::run()
       current_room = next_room;
       room_vector_.at(current_room)->enter(this);
     }
-
   }
 }
 
