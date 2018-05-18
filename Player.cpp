@@ -27,12 +27,12 @@ void Player::setTexture(std::string new_texture)
   player_sprite_.setTexture(player_texture_);
 }
 
-void setClass(classes new_class)
+void Player::setClass(classes new_class)
 {
   class_ = new_class;
 }
 
-void addAbility(std::string new_ability)
+void Player::addAbility(std::string new_ability)
 {
   abilities_.push_back(new_ability);
 }

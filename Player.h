@@ -31,7 +31,7 @@ public:
 
   void setGender(gender new_gender);
   void setRace(race new_race);
-  void setTexture(sf::Texture new_texture);
+  void setTexture(std::string new_texture);
   void setClass(classes new_class);
   void addAbility(std::string new_ability);
 
