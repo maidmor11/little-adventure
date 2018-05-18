@@ -53,5 +53,9 @@ void CreateCharacter::exit()
 
 int CreateCharacter::transition(sf::RenderWindow* game_window)
 {
-  
+  sf::Vector2i mouse_pos = sf::Mouse::getPosition(*game_window);
+  if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
+    return 0;
+
+
 }

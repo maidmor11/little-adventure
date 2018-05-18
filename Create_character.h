@@ -7,9 +7,9 @@ class Player;
 class CreateCharacter : public State
 {
 public:
-  void enter();
+  void enter(Engine* engine);
   void exit();
-  int transition();
+  int transition(sf::RenderWindow* game_window);
 private:
   //Choose Gender
   sf::Texture gender_male_;

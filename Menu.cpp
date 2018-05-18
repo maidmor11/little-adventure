@@ -25,7 +25,7 @@ int Menu::transition(sf::RenderWindow* game_window)
   if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
   {
     if(start_button_sprite_.getGlobalBounds().contains(sf::Vector2f(mouse_pos)))
-      return State::current_room::CHOOSE_GENDER;
+      return State::current_room::CREATE_CHARACTER;
   }
   return State::current_room::MENU;
 }
