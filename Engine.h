@@ -5,6 +5,7 @@
 #include <vector>
 
 class State;
+class Player;
 
 class Engine
 {
@@ -22,6 +23,7 @@ public:
   void appendSpriteVector(std::vector<sf::Sprite> sprite_vector);
 
   std::vector<sf::Sprite> getSpriteVector() { return sprite_vector_;};
+  Player* getPlayer() {return player_;}
 private:
   std::vector<sf::Sprite> sprite_vector_;
   std::vector<State*> room_vector_;
@@ -33,6 +35,8 @@ private:
   void handleRoom();
   int current_room_;
   int next_room_;
+
+  Player* player_;
 };
 
 
