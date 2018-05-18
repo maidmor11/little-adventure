@@ -33,6 +33,9 @@ private:
   sf::Sprite fire_ability_banner_sprite_;
   sf::Sprite ice_ability_banner_sprite_;
 
+
+  int savegame_nr_;
+  bool canCreateNewSaveGame();
   Player* player_;
 };
 #endif

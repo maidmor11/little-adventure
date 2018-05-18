@@ -56,12 +56,42 @@ void Engine::run()
 
 void Engine::handleRoom()
 {
-  next_room_ = room_vector_.at(current_room_)->transition(&window_);
-  if(current_room_ != next_room_)
+  try
   {
-    room_vector_.at(current_room_)->exit();
-    current_room_ = next_room_;
-    room_vector_.at(current_room_)->enter(this);
+    next_room_ = room_vector_.at(current_room_)->transition(&window_);
+    if(current_room_ != next_room_)
+    {
+      if(next_room_ > 99)
+      {
+        throw next_room_;
+      }
+      room_vector_.at(current_room_)->exit();
+      current_room_ = next_room_;
+      room_vector_.at(current_room_)->enter(this);
+    }
+  }
+  catch(int err)
+  {
+    switch(err)
+    {
+      case State::room_error::ERR_NO_SAVE_LEFT:
+        std::cout << "NO SAVEGAME LEFT" << std::endl;
+        current_room_ = State::current_room::MENU;
+        next_room_ = State::current_room::MENU;
+        room_vector_.at(current_room_)->enter(this);
+        break;
+      case State::room_error::ERR_CAN_NOT_OPEN:
+        current_room_ = State::current_room::MENU;
+        next_room_ = State::current_room::MENU;
+        room_vector_.at(current_room_)->enter(this);
+        std::cout << "CANT OPEN SAVEGAME" << std::endl;
+        break;
+      default:
+        next_room_ = State::current_room::MENU;
+        current_room_ = State::current_room::MENU;
+        room_vector_.at(current_room_)->enter(this);
+        break;
+    }
   }
 }
 

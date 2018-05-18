@@ -8,6 +8,11 @@ class Engine;
 class State
 {
 public:
+  enum room_error
+  {
+    ERR_NO_SAVE_LEFT = 100,
+    ERR_CAN_NOT_OPEN
+  };
   enum current_room
   {
     MENU,
