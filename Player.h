@@ -9,6 +9,12 @@ class Player
 {
 public:
 //------------------------------------------------------------------------------
+  enum gender
+  {
+    MALE,
+    FEMALE
+  };
+
   enum race
   {
     HUMAN
@@ -23,10 +29,10 @@ public:
   Player(std::string player_file);
 
 
-  void setGender(int new_gender);
-  void setRace(int new_race);
+  void setGender(gender new_gender);
+  void setRace(race new_race);
   void setTexture(sf::Texture new_texture);
-  void setClass(int new_class);
+  void setClass(classes new_class);
   void addAbility(std::string new_ability);
 
   int getGender() { return gender_;};
@@ -40,7 +46,7 @@ private:
   sf::Texture player_texture_;
   sf::Sprite player_sprite_;
 
-  int gender_;
+  gender gender_;
   race race_;
   classes class_;
   std::vector<std::string> abilities_;

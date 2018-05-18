@@ -11,12 +11,12 @@ Player::Player(std::string player_file)
 }
 
 
-void Player::setGender(int new_gender)
+void Player::setGender(gender new_gender)
 {
   gender_ = new_gender;
 }
 
-void Player::setRace(int new_race)
+void Player::setRace(race new_race)
 {
   race_ = new_race;
 }
@@ -27,7 +27,7 @@ void Player::setTexture(std::string new_texture)
   player_sprite_.setTexture(player_texture_);
 }
 
-void setClass(int new_class)
+void setClass(classes new_class)
 {
   class_ = new_class;
 }
