@@ -31,7 +31,7 @@ public:
 
   int getGender() { return gender_;};
   int getRace() { return race_;};
-  int getClass() { return class_};
+  int getClass() { return class_;};
   std::vector<std::string> getAbilityList() { return abilities_;};
   sf::Sprite getPlayerSprite() { return player_sprite_;};
 

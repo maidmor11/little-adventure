@@ -9,7 +9,7 @@
 
 //INCLUDE OF THE ROOMS:
 #include "Menu.h"
-
+#include "Create_character.h"
 #include "Arena.h"
 
 
@@ -28,6 +28,7 @@ Engine::Engine()
 void Engine::fillRoomVector()
 {
   room_vector_.push_back(new Menu);
+  room_vector_.push_back(new CreateCharacter);
   room_vector_.push_back(new Arena);
 }
 
