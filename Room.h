@@ -11,10 +11,7 @@ public:
   enum current_room
   {
     MENU,
-    CHOOSE_GENDER,
-    CHOOSE_RACE,
-    CHOOSE_CLASS,
-    CHOOSE_ABILITIES,
+    CREATE_CHARACTER,
     ARENA
   };
   virtual void enter(Engine* engine) = 0;

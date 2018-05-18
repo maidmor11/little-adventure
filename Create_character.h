@@ -1,6 +1,9 @@
 #ifndef CREATE_CHAR_H
 #define CREATE_CHAR_H
 #include "Room.h"
+
+class Player;
+
 class CreateCharacter : public State
 {
 public:
@@ -29,5 +32,7 @@ private:
 
   sf::Sprite fire_ability_banner_sprite_;
   sf::Sprite ice_ability_banner_sprite_;
+
+  Player* player_;
 };
 #endif
