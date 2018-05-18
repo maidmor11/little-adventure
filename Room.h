@@ -11,6 +11,7 @@ public:
   enum current_room
   {
     MENU,
+    LOAD_SAFE_GAME,
     CREATE_CHARACTER,
     ARENA
   };
