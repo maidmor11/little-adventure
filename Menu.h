@@ -14,6 +14,9 @@ private:
   //Objects in Room
   sf::Texture start_button_;
   sf::Sprite start_button_sprite_;
+
+  sf::Texture load_button_;
+  sf::Texture load_button_sprite:;
 };
 
 
