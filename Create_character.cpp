@@ -45,7 +45,7 @@ void CreateCharacter::enter(Engine* engine)
   this->room_sprite_vector_.push_back(ice_ability_banner_sprite_);
 
   engine->setSpriteVector(this->room_sprite_vector_);
-  std::cout << "Enterd Create Character" << std::endl;
+  std::cout << "Entered Create Character" << std::endl;
 
 }
 

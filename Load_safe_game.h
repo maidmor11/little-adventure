@@ -1,7 +1,8 @@
 #ifndef LOAD_SAVE_GAME_H
 #define LOAD_SAVE_GAME_H
-
+#include "Room.h"
 class Player;
+class Engine;
 
 class Load : public State
 {

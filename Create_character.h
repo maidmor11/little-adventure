@@ -1,8 +1,9 @@
 #ifndef CREATE_CHAR_H
 #define CREATE_CHAR_H
 #include "Room.h"
-
+#include <SFML/Graphics.hpp>
 class Player;
+class Engine;
 
 class CreateCharacter : public State
 {

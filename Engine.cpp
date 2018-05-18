@@ -11,6 +11,7 @@
 #include "Menu.h"
 #include "Create_character.h"
 #include "Arena.h"
+#include "Load_safe_game.h"
 
 
 Engine::Engine()
@@ -28,6 +29,7 @@ Engine::Engine()
 void Engine::fillRoomVector()
 {
   room_vector_.push_back(new Menu);
+  room_vector_.push_back(new Load);
   room_vector_.push_back(new CreateCharacter);
   room_vector_.push_back(new Arena);
 }

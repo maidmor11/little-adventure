@@ -13,7 +13,7 @@ void Menu::enter(Engine* engine)
   start_button_sprite_.setPosition(1280/2, 0);
 
   load_button_.loadFromFile("./assets/menu_load_btn.png");
-  load_button_sprite.setTexture(load_button_);
+  load_button_sprite_.setTexture(load_button_);
   load_button_sprite_.setPosition(1280/2, 200);
 
   this->room_sprite_vector_.push_back(start_button_sprite_);
